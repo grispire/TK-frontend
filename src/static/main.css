@@ -1,0 +1,236 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  font-size: 16px;
+  font-family: Verdana, sans-serif;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  -webkit-background-size: cover;
+  background-size: cover;
+  min-width: 300px;
+}
+
+h1 {
+  padding-top: 25px;
+  text-align: center;
+  font-size: 1.7em;
+}
+
+/*SIGN-IN & SIGN-UP*/
+
+.signin {
+  border: 1px solid rgba(102, 196, 238, 1);
+  background-color: rgba(255, 255, 255, 0.7);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 90%;
+  max-width: 450px;
+  margin: 40px auto 20px auto;
+  padding: 5px;
+}
+
+.signin h2 {
+  margin: 10px 0px 50px 0px;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+.signin input,
+.signin label {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.signin label {
+  margin: 25px auto 5px;
+}
+
+.signin .input-error,
+.signin .input-success {
+  font-size: 0.8em !important;
+  margin: 5px auto 5px;
+  color: rgba(254, 166, 71, 1);
+}
+
+.signin .input-success {
+  color: green;
+}
+
+.signin-buttons__wrapper {
+  width: 80%;
+  margin: 25px auto 10px auto;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-align-items: flex-end;
+  align-items: flex-end;
+}
+
+.signin-buttons__wrapper p {
+  margin: 10px 0px;
+}
+
+.signin-button {
+  background-color: rgba(102, 196, 238, 1);
+  border: none;
+  padding: 5px 15px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+.signin-button:hover {
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.signin-button:focus {
+  outline: none;
+}
+
+.signin-button:active {
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.8);
+  outline: none;
+}
+
+.signup-button {
+  color: rgba(47, 128, 237, 1);
+}
+
+.auth-error {
+  font-size: 0.8em;
+  color: red;
+  text-align: center;
+  padding-top: 5px;
+}
+
+/*LOG OUT*/
+.log-out {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: rgb(244, 78, 66);
+  border: none;
+  padding: 5px 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+.log-out:hover {
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.log-out:focus {
+  outline: none;
+}
+
+.log-out:active {
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.8);
+  outline: none;
+}
+
+/*SPA WRAPPER*/
+.root-wrapper {
+  padding: 5px;
+}
+
+.main-wrapper {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+/*CATEGORIES-PICKER*/
+
+.categories {
+  overflow-y: auto;
+  width: 25%;
+  min-width: 300px;
+  border: 1px solid grey;
+  max-height: 600px;
+  margin-left: 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  align-self: flex-start;
+}
+
+.categories h2 {
+  font-size: 1.2em;
+  padding: 15px;
+  text-align: center;
+  background-color: rgba(47, 128, 237, 1);
+  color: white;
+}
+
+.categories-list {
+  padding: 15px 0 10px 15px;
+}
+
+.categories-list li:hover {
+  color: rgba(86, 204, 242, 1);
+  cursor: pointer;
+}
+
+.subcategories-list {
+  padding: 4px 0px 4px 10px;
+}
+
+.subcategories-list + .category {
+  margin-top: 10px;
+}
+
+.category__active {
+  font-weight: bold;
+}
+
+.subcategory-active {
+  color: rgba(47, 128, 237, 1);
+}
+
+/*PRODUCTS OUTPUT*/
+.products {
+  width: 45%;
+  min-width: 250px;
+  padding-left: 15px;
+}
+
+.products h2 {
+  font-size: 1.3em;
+  text-align: center;
+  color: rgba(47, 128, 237, 1);
+}
+
+.products-list {
+  text-align: center;
+}
+
+.products-list li:nth-child(2n) {
+  color: rgba(0, 0, 0, 0.6);
+}
+.products-list li:not(:last-child) {
+  padding-bottom: 8px;
+}
+
+@media screen and (max-width: 640px) {
+  .categories {
+    margin: 0 auto;
+  }
+  .products {
+    margin: 25px auto 10px auto;
+    width: 100%;
+  }
+}
